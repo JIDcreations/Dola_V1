@@ -142,6 +142,13 @@ $$('[data-nav-link]').forEach((link) => {
   });
 });
 
+/* Mobile dock: visible after the hero, hidden where booking is already on screen */
+const dock = $('[data-dock]');
+const dockState = { past: false, booking: false };
+const syncDock = () => dock.classList.toggle('is-visible', dockState.past && !dockState.booking);
+ScrollTrigger.create({ trigger: '[data-entree]', start: 'top 60%', end: 'max', onToggle: (s) => { dockState.past = s.isActive; syncDock(); } });
+ScrollTrigger.create({ trigger: '#afspraak', start: 'top 85%', end: 'max', onToggle: (s) => { dockState.booking = s.isActive; syncDock(); } });
+
 /* Headings: lines rise out of a mask ---------------------------------------- */
 $$('[data-lines]').forEach((h) => {
   const lines = $$('.line > span', h);
