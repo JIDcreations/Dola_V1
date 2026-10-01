@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T13:04:57+00:00",
+  "title": "Design System: Salon Dola",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Broken Black",
+        "canonical": "#141414",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#141414",
+          "#1e1e1e",
+          "#3a3a3a",
+          "#5a5a5a",
+          "#8a8a8a",
+          "#c8c8c8",
+          "#fafafa"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Raised Black",
+        "canonical": "#1e1e1e",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#141414",
+          "#1e1e1e",
+          "#3a3a3a",
+          "#5a5a5a",
+          "#8a8a8a",
+          "#c8c8c8",
+          "#fafafa"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Gallery White",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#141414",
+          "#1e1e1e",
+          "#3a3a3a",
+          "#5a5a5a",
+          "#8a8a8a",
+          "#c8c8c8",
+          "#fafafa"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Graphite Label",
+        "canonical": "#8a8a8a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#141414",
+          "#1e1e1e",
+          "#3a3a3a",
+          "#5a5a5a",
+          "#8a8a8a",
+          "#c8c8c8",
+          "#fafafa"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(250, 250, 250, .12)",
+        "tonalRamp": [
+          "rgba(250,250,250,.04)",
+          "rgba(250,250,250,.08)",
+          "rgba(250,250,250,.12)",
+          "rgba(250,250,250,.2)",
+          "rgba(250,250,250,.32)",
+          "rgba(250,250,250,.5)",
+          "rgba(250,250,250,.7)",
+          "rgba(250,250,250,.9)"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "rgba(250, 250, 250, .32)",
+        "tonalRamp": [
+          "rgba(250,250,250,.04)",
+          "rgba(250,250,250,.08)",
+          "rgba(250,250,250,.12)",
+          "rgba(250,250,250,.2)",
+          "rgba(250,250,250,.32)",
+          "rgba(250,250,250,.5)",
+          "rgba(250,250,250,.7)",
+          "rgba(250,250,250,.9)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Soft Error Rose",
+        "canonical": "#f0b4ac",
+        "tonalRamp": [
+          "#3d1f1b",
+          "#5e2f29",
+          "#8a463d",
+          "#b5655a",
+          "#d98a7f",
+          "#f0b4ac",
+          "#f7d3ce",
+          "#fcecea"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section headings: short statements ending in a full stop, revealed line by line."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Full-screen menu items and the closing gallery link; phone number in the same tight setting at 400."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Subheadings, form confirmation, and (scaled up) the extension house rule."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs at paper 82% opacity, max 38ch."
+      },
+      "label": {
+        "displayName": "Label (SALON voice)",
+        "purpose": "Section index labels, footer heads, intro tagline, scroll hint; uppercase, mute."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Pill text, Menu toggle, form field labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "point-pulse",
+        "value": "0 0 0 0 rgba(250,250,250,.35) -> 0 0 0 22px rgba(250,250,250,0), 2.6s loop",
+        "purpose": "Expanding ring on the confirmation point after a sent form; off under reduced motion."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 1px 0 0 #fafafa",
+        "purpose": "Doubles the input underline on keyboard focus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Default CSS easing for all state transitions (GSAP expo.out equivalent)."
+      },
+      {
+        "name": "circle-reveal",
+        "value": "clip-path circle(0% -> 75% at 50% 50%), 1.9s power3.inOut, image scale 1.16 parallax",
+        "purpose": "Entry of every photograph."
+      },
+      {
+        "name": "line-reveal",
+        "value": "yPercent 110 -> 0, 1.5s expo.out, stagger .1",
+        "purpose": "Display headings rise from a mask, line by line."
+      },
+      {
+        "name": "menu-open",
+        "value": "clip-path circle(0% -> 150%) from the toggle, 1s ease-out",
+        "purpose": "Full-screen menu opens as a circle."
+      },
+      {
+        "name": "photo-colour",
+        "value": "filter grayscale(1) sepia(.16) contrast(1.04) brightness(.94) -> none, 1.2s",
+        "purpose": "Warm monochrome to colour on fine-pointer hover."
+      },
+      {
+        "name": "smooth-scroll",
+        "value": "Lenis lerp .085, wheelMultiplier .9",
+        "purpose": "Slow, soft scroll; disabled under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "opacity fades 1.2s only",
+        "purpose": "No pin, zoom, clip or parallax when prefers-reduced-motion is set."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "footer",
+        "value": "720px"
+      },
+      {
+        "name": "md",
+        "value": "900px"
+      },
+      {
+        "name": "booking",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pill Button",
+      "kind": "button",
+      "refersTo": "button-pill",
+      "description": "Primary action (Afspraak, Verstuur): paper fill that drains to outline on hover.",
+      "html": "<a class=\"ds-pill\" href=\"#\">Afspraak</a>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-pill{display:inline-flex;align-items:center;justify-content:center;height:2.6rem;padding:0 1.35rem;border:1px solid var(--paper);border-radius:999px;background:var(--paper);color:var(--ink);font-size:.82rem;font-weight:400;letter-spacing:.06em;text-decoration:none;white-space:nowrap;transition:background-color .5s var(--ease-out),color .5s var(--ease-out),transform .2s;} .ds-pill:hover{background:transparent;color:var(--paper);} .ds-pill:active{transform:scale(.98);} .ds-pill:focus-visible{outline:1px solid var(--paper);outline-offset:4px;}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip-choice",
+      "description": "Multi-select treatment pill in the booking form.",
+      "html": "<label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Kleuren</span></label> <label class=\"ds-chip\"><input type=\"checkbox\"><span>Knippen</span></label>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-chip{position:relative;display:inline-block;color:var(--paper);} .ds-chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer;} .ds-chip span{display:inline-flex;align-items:center;height:2.5rem;padding:0 1.15rem;border:1px solid rgba(250,250,250,.32);border-radius:999px;font-size:.88rem;letter-spacing:.02em;transition:background-color .4s var(--ease-out),color .4s var(--ease-out),border-color .4s;} .ds-chip:hover span{border-color:var(--paper);} .ds-chip input:checked+span{background:var(--paper);color:var(--ink);border-color:var(--paper);} .ds-chip input:focus-visible+span{outline:1px solid var(--paper);outline-offset:3px;}"
+    },
+    {
+      "name": "Underline Field",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Boxless text field: label above, 1px underline that turns paper on focus.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-n\">Naam</label><input id=\"ds-n\" type=\"text\" placeholder=\"Je naam\"><p class=\"ds-field__error\">Vul je naam in.</p></div>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-field{display:grid;gap:.5rem;color:var(--paper);} .ds-field label{font-size:.82rem;letter-spacing:.06em;} .ds-field input{width:100%;font:inherit;font-weight:300;font-size:1.1rem;color:var(--paper);background:transparent;border:0;border-bottom:1px solid rgba(250,250,250,.32);border-radius:0;padding:.55rem 0 .7rem;transition:border-color .4s var(--ease-out);} .ds-field input::placeholder{color:#9a9a9a;} .ds-field input:focus{outline:none;border-bottom-color:var(--paper);} .ds-field input:focus-visible{box-shadow:0 1px 0 0 var(--paper);} .ds-field__error{margin:0;font-size:.82rem;color:#f0b4ac;}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "button-pill",
+      "description": "Fixed top-right pill plus Menu toggle led by the point.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__pill\" href=\"#\">Afspraak</a><button class=\"ds-nav__menu\" type=\"button\"><span class=\"ds-nav__dot\"></span>Menu</button></nav>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-nav{display:flex;justify-content:flex-end;align-items:center;gap:1.4rem;height:72px;padding:0 32px;background:var(--ink);color:var(--paper);} .ds-nav__pill{display:inline-flex;align-items:center;height:2.6rem;padding:0 1.35rem;border:1px solid var(--paper);border-radius:999px;background:var(--paper);color:var(--ink);font-size:.82rem;letter-spacing:.06em;text-decoration:none;transition:background-color .5s var(--ease-out),color .5s var(--ease-out);} .ds-nav__pill:hover{background:transparent;color:var(--paper);} .ds-nav__menu{display:inline-flex;align-items:center;gap:.7rem;height:2.6rem;font:inherit;font-size:.82rem;letter-spacing:.06em;color:inherit;background:none;border:0;cursor:pointer;} .ds-nav__dot{width:8px;height:8px;border-radius:50%;background:var(--paper);transition:transform .6s var(--ease-out);} .ds-nav__menu:hover .ds-nav__dot,.ds-nav__menu:focus-visible .ds-nav__dot{transform:scale(1.8);} .ds-nav a:focus-visible,.ds-nav__menu:focus-visible{outline:1px solid var(--paper);outline-offset:4px;}"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Tracked index label over a display statement ending in a full stop.",
+      "html": "<div class=\"ds-head\"><p class=\"ds-label\">01 · De kapper</p><h2 class=\"ds-display\">Tim.</h2></div>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-head{color:var(--paper);background:var(--ink);padding:2rem;} .ds-label{margin:0 0 1.6rem;font-size:.72rem;font-weight:300;text-transform:uppercase;letter-spacing:.5em;line-height:1.4;color:var(--mute);} .ds-display{margin:0;font-size:clamp(3.6rem,1.6rem + 9vw,11.5rem);font-weight:450;letter-spacing:-.03em;line-height:.92;}"
+    },
+    {
+      "name": "Photo Frame",
+      "kind": "card",
+      "refersTo": "photo-frame",
+      "description": "Square frame on Raised Black; warm monochrome image, colour on hover. Empty frames hold only the point.",
+      "html": "<figure class=\"ds-photo\"><span class=\"ds-dot\"></span></figure>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-photo{margin:0;width:240px;aspect-ratio:4/5;display:grid;place-items:center;overflow:hidden;background:var(--ink-2);border-radius:0;} .ds-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) sepia(.16) contrast(1.04) brightness(.94);transition:filter 1.2s var(--ease-out);} .ds-photo:hover img{filter:none;} .ds-dot{display:block;width:12px;height:12px;border-radius:50%;background:var(--paper);}"
+    },
+    {
+      "name": "The Point",
+      "kind": "custom",
+      "refersTo": "point",
+      "description": "Signature mark: cursor, placeholder, menu dot and pulsing form confirmation.",
+      "html": "<div class=\"ds-done\"><span class=\"ds-point\"></span><p>Bedankt. Ik neem snel contact met je op.</p></div>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-done{display:grid;gap:1.8rem;justify-items:start;padding:2rem;background:var(--ink);color:var(--paper);} .ds-done p{margin:0;font-size:clamp(1.45rem,1.1rem + 1.4vw,2.35rem);font-weight:400;letter-spacing:-.015em;line-height:1.15;} .ds-point{display:block;width:14px;height:14px;border-radius:50%;background:var(--paper);animation:ds-pulse 2.6s var(--ease-out) infinite;} @keyframes ds-pulse{0%{box-shadow:0 0 0 0 rgba(250,250,250,.35);}70%,100%{box-shadow:0 0 0 22px rgba(250,250,250,0);}} @media (prefers-reduced-motion:reduce){.ds-point{animation:none;}}"
+    },
+    {
+      "name": "House Rule Frame",
+      "kind": "custom",
+      "refersTo": "rule-frame",
+      "description": "One non-negotiable statement inside a 1px hairline square.",
+      "html": "<blockquote class=\"ds-rule\"><p>Extensions die elders geplaatst zijn, behandel ik niet.</p></blockquote>",
+      "css": ":host{--ink:#141414;--ink-2:#1e1e1e;--paper:#fafafa;--mute:#8a8a8a;--line:rgba(250,250,250,.12);--ease-out:cubic-bezier(.16,1,.3,1);font-family:'Outfit Variable','Outfit',system-ui,sans-serif;} .ds-rule{margin:0;border:1px solid var(--line);padding:clamp(2.2rem,6vw,6rem) clamp(1.4rem,5vw,5rem);background:var(--ink);color:var(--paper);} .ds-rule p{margin:0;font-size:clamp(1.9rem,1rem + 3.6vw,4.8rem);font-weight:400;letter-spacing:-.025em;line-height:1.08;max-width:18ch;text-wrap:balance;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Door in the Full Stop",
+    "overview": "**Creative North Star: \"The Door in the Full Stop\"**\n\nSalon Dola is a private atelier you enter through a punctuation mark. The point after \"DOLA.\" is the one figure the whole system is built from: it is the cursor, the shape that opens every photograph, the window the intro zooms through, the menu's toggle and the quiet pulse that confirms a sent form. Everything else is type on broken black, set in a single family and scaled hard, with thin light lines as the only structure.\n\nThe register is a fashion house, not a high-street salon. Density is low and the pace is slow: generous section spacing, long expo-out eases, photographs held back in warm monochrome until the pointer asks for colour. Warmth comes from the photography and the restraint, never from an accent colour or ornament. The logo's own two voices, a thin, widely tracked \"SALON\" and a tight, heavy \"DOLA.\", are the two voices of every page: tracked labels and tightly set display headings that end on a full stop.\n\nThe brief rejects the salon template of hero photo, service cards and price list, and rejects decorative icons; the build carries no icon set.",
+    "keyCharacteristics": [
+      "Pure black and white, warm-toned grayscale photography, no accent colour.",
+      "Outfit only; scale and tracking do all the hierarchy work.",
+      "Circles are the only curved shape; every plane, photo and frame is square.",
+      "Headings are short statements that close with a full stop.",
+      "Motion is slow and soft; reduced motion falls back to fades only."
+    ],
+    "rules": [
+      {
+        "name": "The No Accent Rule",
+        "body": "There is no brand accent. Emphasis is made with scale, weight, white fill or a line, never with hue. The error rose is the only colour and appears only when something has gone wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Monochrome Rule",
+        "body": "Photographs are shown grayscale with a slight warm cast (grayscale 1, sepia .16, contrast 1.04, brightness .94) and return to full colour on pointer hover over 1.2s. Touch devices keep the monochrome.",
+        "section": "colors"
+      },
+      {
+        "name": "The Full Stop Rule",
+        "body": "Display headings and menu items are short declaratives that end on a period. The point is part of the word, not a decoration.",
+        "section": "typography"
+      },
+      {
+        "name": "The SALON Tracking Rule",
+        "body": "Wide 0.5em tracking belongs only to small uppercase labels at weight 300. Never track display type open; never set labels heavy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Atelier Rule",
+        "body": "Nothing floats. Shadow appears only as the point's pulse ring and as a focus underline, never to lift a surface.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Point or Square Rule",
+        "body": "If it is clickable as a pill or behaves like the point, it is round; everything else has zero radius. There are no intermediate radii.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Circle Reveal Rule",
+        "body": "Photographs enter by a clip-path circle opening from the centre (0% to 75%, 1.9s power3.inOut) with a light parallax scale from 1.16. Under reduced motion they fade.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do build every emphasis from ink, paper, scale and a 1px line; keep the error rose for errors only.",
+      "Do end display headings and menu items with a full stop.",
+      "Do keep wide 0.5em tracking for small weight-300 uppercase labels, and compensate trailing tracking when centred.",
+      "Do reveal photographs with a circle opening and show them in warm monochrome, colour on hover only on fine pointers.",
+      "Do use slow expo-out easing (cubic-bezier(.16, 1, .3, 1)) and long durations (1.2s to 2s); fall back to fades under reduced motion.",
+      "Do use the point as the placeholder for missing photography rather than generic grey boxes or stock imagery."
+    ],
+    "donts": [
+      "Don't introduce an accent colour or a second typeface.",
+      "Don't use any radius other than 0, fully round pill or circle.",
+      "Don't lift surfaces with drop shadows or build card grids; the salon template of hero photo, service cards and price list is rejected.",
+      "Don't use decorative icons, emoji or exclamation marks; the point is the only mark.",
+      "Don't show the custom cursor on touch devices."
+    ]
+  }
+}
